@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "RAAlertManager"
-  s.version      = "0.0.2"
+  s.version      = "0.0.3"
   s.summary      = "RAAlertManager handle alert, errors and local notifications."
 
   # This description is used to generate tags and improve search results.
