@@ -144,7 +144,7 @@ Pod::Spec.new do |s|
   s.dependency "Mantle"
   s.dependency "GoogleMaps", "~> 2"
   s.dependency "GooglePlaces", "~> 2"
-  s.dependency "AFNetworking", "~> 1.3.4"
+  s.dependency "AFNetworking", "~> 2"
   s.dependency "Fabric"
   s.dependency "Crashlytics"
   s.dependency "FBSDKCoreKit"
