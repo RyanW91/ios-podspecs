@@ -110,7 +110,6 @@ Pod::Spec.new do |s|
 
   # s.preserve_paths = "FilesToSave", "MoreFilesToSave"
 
-
   # ――― Project Linking ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
   #  Link your library with frameworks, or libraries. Libraries do not include
@@ -131,11 +130,13 @@ Pod::Spec.new do |s|
   #  you can include multiple dependencies to ensure it works.
 
   s.requires_arc = true
+  s.prefix_header_contents = "#import <SystemConfiguration/SystemConfiguration.h>"
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # s.dependency "JSONKit", "~> 1.4"
   s.dependency "Mantle"
-  s.dependency "GoogleMaps", "~> 2.0.0"
+  s.dependency "GoogleMaps", "~> 2"
+  s.dependency "GoogleMapsBase"
   s.dependency "GooglePlaces", "~> 2"
   s.dependency "AFNetworking", "~> 1.3.4"
   s.dependency "Fabric"
