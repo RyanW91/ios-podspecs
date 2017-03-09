@@ -117,7 +117,7 @@ Pod::Spec.new do |s|
   #
 
   # s.framework  = "SomeFramework"
-  s.frameworks  = "CoreLocation", "SystemConfiguration", "MobileCoreServices", "GoogleMaps"
+  s.frameworks  = "CoreLocation", "SystemConfiguration", "MobileCoreServices", "GoogleMaps", "GoogleMapsBase", "GoogleMapsCore"
 
   s.library   = "GoogleAnalyticsServices"
   # s.libraries = "iconv", "xml2"
@@ -153,7 +153,7 @@ Pod::Spec.new do |s|
 
   s.pod_target_xcconfig = {
         'FRAMEWORK_SEARCH_PATHS' => '$(inherited) $(PODS_ROOT)/GoogleMaps',
-        'OTHER_LDFLAGS'          => '$(inherited) -undefined dynamic_lookup'
+        'OTHER_LDFLAGS'          => '$(inherited) -ObjC -undefined dynamic_lookup'
     }
 
 end
