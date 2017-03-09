@@ -117,7 +117,7 @@ Pod::Spec.new do |s|
   #
 
   # s.framework  = "SomeFramework"
-  s.frameworks  = "CoreLocation", "SystemConfiguration", "MobileCoreServices", "GoogleMaps", "GoogleMapsBase", "GoogleMapsCore"
+  s.frameworks  = "CoreLocation", "SystemConfiguration", "MobileCoreServices"
 
   s.library   = "GoogleAnalyticsServices"
   # s.libraries = "iconv", "xml2"
@@ -152,7 +152,7 @@ Pod::Spec.new do |s|
   s.dependency "SAMKeychain"
 
   s.pod_target_xcconfig = {
-        'FRAMEWORK_SEARCH_PATHS' => '$(inherited) $(PODS_ROOT)/GoogleMaps',
+        'FRAMEWORK_SEARCH_PATHS' => '$(inherited) $(PODS_ROOT)/GoogleMaps/Base/Frameworks $(PODS_ROOT)/GoogleMaps/Maps/Frameworks $(PODS_ROOT)/Crashlytics/iOS',
         'OTHER_LDFLAGS'          => '$(inherited) -ObjC -undefined dynamic_lookup'
     }
 
