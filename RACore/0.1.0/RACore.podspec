@@ -117,7 +117,7 @@ Pod::Spec.new do |s|
   #
 
   # s.framework  = "SomeFramework"
-  s.frameworks  = "CoreLocation", "SystemConfiguration", "MobileCoreServices"
+  s.frameworks  = "CoreLocation", "SystemConfiguration", "MobileCoreServices", "GoogleMaps"
 
   s.library   = "GoogleAnalyticsServices"
   # s.libraries = "iconv", "xml2"
