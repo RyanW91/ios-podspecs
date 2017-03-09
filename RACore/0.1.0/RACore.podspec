@@ -135,7 +135,7 @@ Pod::Spec.new do |s|
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # s.dependency "JSONKit", "~> 1.4"
   s.dependency "Mantle"
-  s.dependency "GoogleMaps", "~> 2"
+  s.dependency "GoogleMaps", "~> 2.0.0"
   s.dependency "GooglePlaces", "~> 2"
   s.dependency "AFNetworking", "~> 1.3.4"
   s.dependency "Fabric"
