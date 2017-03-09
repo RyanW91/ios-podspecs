@@ -120,7 +120,7 @@ Pod::Spec.new do |s|
   # s.framework  = "SomeFramework"
   s.frameworks  = "CoreLocation", "SystemConfiguration"
 
-  s.library   = "libGoogleAnalyticsServices"
+  s.library   = "GoogleAnalyticsServices"
   # s.libraries = "iconv", "xml2"
 
 
