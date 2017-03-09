@@ -117,7 +117,7 @@ Pod::Spec.new do |s|
   #
 
   # s.framework  = "SomeFramework"
-  s.frameworks  = "CoreLocation", "SystemConfiguration"
+  s.frameworks  = "CoreLocation", "SystemConfiguration", "MobileCoreServices"
 
   s.library   = "GoogleAnalyticsServices"
   # s.libraries = "iconv", "xml2"
@@ -130,13 +130,19 @@ Pod::Spec.new do |s|
   #  you can include multiple dependencies to ensure it works.
 
   s.requires_arc = true
-  s.prefix_header_contents = "#import <SystemConfiguration/SystemConfiguration.h>"
+  s.prefix_header_contents = '#if __IPHONE_OS_VERSION_MIN_REQUIRED
+                                #import <SystemConfiguration/SystemConfiguration.h>
+                                #import <MobileCoreServices/MobileCoreServices.h>
+                            #else
+                                #import <SystemConfiguration/SystemConfiguration.h>
+                                #import <CoreServices/CoreServices.h>
+                            #endif
+                        '
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # s.dependency "JSONKit", "~> 1.4"
   s.dependency "Mantle"
   s.dependency "GoogleMaps", "~> 2"
-  s.dependency "GoogleMapsBase"
   s.dependency "GooglePlaces", "~> 2"
   s.dependency "AFNetworking", "~> 1.3.4"
   s.dependency "Fabric"
@@ -144,6 +150,10 @@ Pod::Spec.new do |s|
   s.dependency "FBSDKCoreKit"
   s.dependency "FBSDKLoginKit"
   s.dependency "SAMKeychain"
-  s.dependency "SAMKeychain"
+
+  s.pod_target_xcconfig = {
+        'FRAMEWORK_SEARCH_PATHS' => '$(inherited) $(PODS_ROOT)/GoogleMaps',
+        'OTHER_LDFLAGS'          => '$(inherited) -undefined dynamic_lookup'
+    }
 
 end
