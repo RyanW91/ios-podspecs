@@ -140,6 +140,7 @@ Pod::Spec.new do |s|
                         '
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
+  s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/ThirdParty/GoogleAnalytics" }
   # s.dependency "JSONKit", "~> 1.4"
   s.dependency "Mantle"
   s.dependency "GoogleMaps", "~> 2"
