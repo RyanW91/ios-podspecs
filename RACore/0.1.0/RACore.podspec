@@ -119,7 +119,7 @@ Pod::Spec.new do |s|
   # s.framework  = "SomeFramework"
   s.frameworks  = "CoreLocation", "SystemConfiguration", "MobileCoreServices"
 
-  s.library   = "GoogleAnalyticsServices"
+  # s.library   = "GoogleAnalyticsServices"
   # s.libraries = "iconv", "xml2"
 
 
@@ -151,10 +151,18 @@ Pod::Spec.new do |s|
   s.dependency "FBSDKCoreKit"
   s.dependency "FBSDKLoginKit"
   s.dependency "SAMKeychain"
+  s.dependency "GoogleAnalytics"
 
   s.pod_target_xcconfig = {
         'FRAMEWORK_SEARCH_PATHS' => '$(inherited) $(PODS_ROOT)/GoogleMaps/Base/Frameworks $(PODS_ROOT)/GoogleMaps/Maps/Frameworks $(PODS_ROOT)/Crashlytics/iOS',
         'OTHER_LDFLAGS'          => '$(inherited) -ObjC -undefined dynamic_lookup'
     }
+
+  s.subspec 'Categories' do |ss|
+    ss.subspec 'CLLocation' do |sss|
+      sss.source_files = 'RACore/CLLocation+Utils.{h,m}'
+      sss.public_header_files = 'RACore/CLLocation+Utils..h'
+    end
+  end
 
 end
