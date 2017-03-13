@@ -91,11 +91,11 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "RACore", "RACore/*.{h,m}"
+  s.source_files  = "RACore", "RACore/*.{h,m}",
   # s.exclude_files = "Classes/Exclude"
 
-  #s.public_header_files = "RACore/RACore.h"
-  s.public_header_files = "RACore/*.h"
+  s.public_header_files = "RACore/RACore.h"
+  #s.public_header_files = "RACore/*.h"
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -158,11 +158,44 @@ Pod::Spec.new do |s|
         'OTHER_LDFLAGS'          => '$(inherited) -ObjC -undefined dynamic_lookup'
     }
 
+  s.subspec 'CacheManager' do |ss|
+    ss.source_files = 'RACore/CacheManager/*.{h,m}'
+    ss.public_header_files = 'RACore/CacheManager/*.h'
+  end
+
   s.subspec 'Categories' do |ss|
-#ss.subspec 'CLLocation' do |sss|
-      ss.source_files = 'RACore/CLLocation+Utils.{h,m}'
-      ss.public_header_files = 'RACore/CLLocation+Utils..h'
-#   end
+    ss.source_files = 'RACore/Categories/CLLocation/*.{h,m}', 'RACore/Categories/NSBundle/*.{h,m}', 'RACore/Categories/NSData/*.{h,m}', 'RACore/Categories/NSError/*.{h,m}', 'RACore/Categories/NSNumber/*.{h,m}', 'RACore/Categories/NSString/*.{h,m}', 'RACore/Categories/UIDevice/*.{h,m}', 'RACore/Categories/UIImage/*.{h,m}'
+    ss.public_header_files = 'RACore/Categories/CLLocation/*.h', 'RACore/Categories/NSBundle/*.h', 'RACore/Categories/NSData/*.h', 'RACore/Categories/NSError/*.h', 'RACore/Categories/NSNumber/*.h', 'RACore/Categories/NSString/*.h', 'RACore/Categories/UIDevice/*.h', 'RACore/Categories/UIImage/*.h'
+  end
+
+  s.subspec 'EnvironmentManager' do |ss|
+    ss.source_files = 'RACore/EnvironmentManager/*.{h,m}'
+    ss.public_header_files = 'RACore/EnvironmentManager/*.h'
+  end
+
+  s.subspec 'ErrorManager' do |ss|
+    ss.source_files = 'RACore/ErrorManagement/*.{h,m}'
+    ss.public_header_files = 'RACore/ErrorManagement/*.h'
+  end
+
+  s.subspec 'GoogleMapsManager' do |ss|
+    ss.source_files = 'RACore/GoogleMapsManager/*.{h,m}'
+    ss.public_header_files = 'RACore/GoogleMapsManager/*.h'
+  end
+
+  s.subspec 'NetworkManager' do |ss|
+   ss.source_files = 'RACore/NetworkManager/*.{h,m}', 'RACore/NetworkManager/*API/*.{h,m}'
+   ss.public_header_files = 'RACore/NetworkManager/*.h', , 'RACore/NetworkManager/*API/*.h'
+  end
+
+  s.subspec 'SessionManager' do |ss|
+    ss.source_files = 'RACore/SessionManager/*.{h,m}'
+    ss.public_header_files = 'RACore/SessionManager/*.h'
+  end
+
+  s.subspec 'UpgradeManager' do |ss|
+    ss.source_files = 'RACore/UpgradeManager/*.{h,m}'
+    ss.public_header_files = 'RACore/UpgradeManager/*.h'
   end
 
 end
