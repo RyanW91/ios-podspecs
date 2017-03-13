@@ -184,8 +184,8 @@ Pod::Spec.new do |s|
   end
 
   s.subspec 'NetworkManager' do |ss|
-   ss.source_files = 'RACore/NetworkManager/*.{h,m}', 'RACore/NetworkManager/*API/*.{h,m}'
-   ss.public_header_files = 'RACore/NetworkManager/*.h', 'RACore/NetworkManager/*API/*.h'
+   ss.source_files = 'RACore/NetworkManager/*.{h,m}', 'RACore/NetworkManager/*API/*.{h,m}', 'RACore/NetworkManager/URLFactory/*.{h,m}'
+   ss.public_header_files = 'RACore/NetworkManager/*.h', 'RACore/NetworkManager/*API/*.h', 'RACore/NetworkManager/URLFactory/*.h'
   end
 
   s.subspec 'SessionManager' do |ss|
