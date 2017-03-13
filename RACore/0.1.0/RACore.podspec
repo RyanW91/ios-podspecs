@@ -169,8 +169,8 @@ Pod::Spec.new do |s|
   end
 
   s.subspec 'Categories' do |ss|
-    ss.source_files = 'RACore/Categories/CLLocation/*.{h,m}', 'RACore/Categories/NSBundle/*.{h,m}', 'RACore/Categories/NSData/*.{h,m}', 'RACore/Categories/NSError/*.{h,m}', 'RACore/Categories/NSNumber/*.{h,m}', 'RACore/Categories/NSString/*.{h,m}', 'RACore/Categories/UIDevice/*.{h,m}', 'RACore/Categories/UIImage/*.{h,m}'
-    ss.public_header_files = 'RACore/Categories/CLLocation/*.h', 'RACore/Categories/NSBundle/*.h', 'RACore/Categories/NSData/*.h', 'RACore/Categories/NSError/*.h', 'RACore/Categories/NSNumber/*.h', 'RACore/Categories/NSString/*.h', 'RACore/Categories/UIDevice/*.h', 'RACore/Categories/UIImage/*.h'
+    ss.source_files = 'RACore/Categories/*.{h,m}', 'RACore/Categories/CLLocation/*.{h,m}', 'RACore/Categories/NSBundle/*.{h,m}', 'RACore/Categories/NSData/*.{h,m}', 'RACore/Categories/NSError/*.{h,m}', 'RACore/Categories/NSNumber/*.{h,m}', 'RACore/Categories/NSString/*.{h,m}', 'RACore/Categories/UIDevice/*.{h,m}', 'RACore/Categories/UIImage/*.{h,m}'
+    ss.public_header_files = 'RACore/Categories/*.h', 'RACore/Categories/CLLocation/*.h', 'RACore/Categories/NSBundle/*.h', 'RACore/Categories/NSData/*.h', 'RACore/Categories/NSError/*.h', 'RACore/Categories/NSNumber/*.h', 'RACore/Categories/NSString/*.h', 'RACore/Categories/UIDevice/*.h', 'RACore/Categories/UIImage/*.h'
   end
 
   s.subspec 'EnvironmentManager' do |ss|
