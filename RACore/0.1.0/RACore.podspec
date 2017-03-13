@@ -158,6 +158,11 @@ Pod::Spec.new do |s|
         'OTHER_LDFLAGS'          => '$(inherited) -ObjC -undefined dynamic_lookup'
     }
 
+  s.subspec 'AlertManager' do |ss|
+    ss.source_files = 'RACore/AlertManager/*.{h,m}'
+    ss.public_header_files = 'RACore/AlertManager/*.h'
+  end
+
   s.subspec 'CacheManager' do |ss|
     ss.source_files = 'RACore/CacheManager/*.{h,m}'
     ss.public_header_files = 'RACore/CacheManager/*.h'
@@ -184,8 +189,9 @@ Pod::Spec.new do |s|
   end
 
   s.subspec 'NetworkManager' do |ss|
-   ss.source_files = 'RACore/NetworkManager/*.{h,m}', 'RACore/NetworkManager/*API/*.{h,m}', 'RACore/NetworkManager/URLFactory/*.{h,m}'
-   ss.public_header_files = 'RACore/NetworkManager/*.h', 'RACore/NetworkManager/*API/*.h', 'RACore/NetworkManager/URLFactory/*.h'
+   ss.source_files = 'RACore/NetworkManager/*.{h,m}', 'RACore/NetworkManager/*API/*.{h,m}', 'RACore/NetworkManager/URLFactory/*.{h,m}', 'RACore/NetworkManager/Config/*.{h,m}'
+   ss.public_header_files = 'RACore/NetworkManager/*.h', 'RACore/NetworkManager/*API/*.h', 'RACore/NetworkManager/URLFactory/*.h', 'RACore/NetworkManager/Config/*.
+h'
   end
 
   s.subspec 'SessionManager' do |ss|
