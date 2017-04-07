@@ -65,7 +65,7 @@ A wrapper for Google Maps SDK to facilitate the api calls
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "git@bitbucket.org:fuelmedevelopers/raalertmanager.git", :tag => "#{s.version}" }
+  s.source       = { :git => "git@bitbucket.org:fuelmedevelopers/ragooglemapsmanager.git", :tag => "#{s.version}" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
