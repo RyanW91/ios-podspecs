@@ -15,8 +15,7 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios, "8.0"
 
-#s.source       = { :git => "git@bitbucket.org:fuelmedevelopers/raerrorreporter.git", :tag => "#{s.version}" }
-s.source       = { :git => "git@bitbucket.org:fuelmedevelopers/raerrorreporter.git" }
+  s.source       = { :git => "git@bitbucket.org:fuelmedevelopers/raerrorreporter.git", :tag => "#{s.version}" }
 
   s.source_files  = "RAErrorReporter", "RAErrorReporter/*.{h,m}"
   s.public_header_files = "RAErrorReporter/RAErrorReporter.h"
