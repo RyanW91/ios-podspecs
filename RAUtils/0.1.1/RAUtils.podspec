@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "RAUtils"
-  s.version      = "0.1.0"
+  s.version      = "0.1.1"
   s.summary      = "RideAustin Utils."
   s.description  = <<-DESC
                     RAUtils englobe common utilities, categories, helpers, ...
