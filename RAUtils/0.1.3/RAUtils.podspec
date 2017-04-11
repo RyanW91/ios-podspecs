@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
   s.source       = { :git => "git@bitbucket.org:fuelmedevelopers/rautils.git", :tag => "#{s.version}" }
 
   s.source_files  = "RAUtils", "RAUtils/*.{h,m}"
-  s.public_header_files = "RAUtils/RAUtils.h"
+  s.public_header_files = "RAUtils/RAUtils.h", "RAUtils/RADefines.h"
 
   s.requires_arc = true
 
