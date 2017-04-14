@@ -92,7 +92,7 @@ A wrapper for Google Maps SDK to facilitate the api calls
 
   s.pod_target_xcconfig = {
      'FRAMEWORK_SEARCH_PATHS' => '$(inherited) $(PODS_ROOT)/GoogleMaps/Base/Frameworks $(PODS_ROOT)/GoogleMaps/Maps/Frameworks',
-     'OTHER_LDFLAGS'          => '$(inherited) -ObjC'
+     'OTHER_LDFLAGS'          => '$(inherited) -ObjC -undefined dynamic_lookup'
     }
 
 end
