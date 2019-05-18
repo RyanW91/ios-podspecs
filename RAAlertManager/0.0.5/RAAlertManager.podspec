@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
                     Tiny library that handle alert, errors and local notifications by state and options.
                    DESC
 
-  s.homepage     = "https://bitbucket.org/fuelmedevelopers/raalertmanager"
+  s.homepage     = "https://github.com/ride-austin/RAAlertManager"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -80,7 +80,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "git@bitbucket.org:fuelmedevelopers/raalertmanager.git", :tag => "#{s.version}" }
+  s.source       = { :git => "git@github.com:ride-austin/RAAlertManager.git", :tag => "#{s.version}" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
